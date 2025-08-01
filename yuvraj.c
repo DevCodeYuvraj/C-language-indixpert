@@ -2,6 +2,11 @@
 int main()
 {
 
-    printf("This is testing file");
+   int i=0;
+   while(i<50)
+   {
+    printf("%d\n",i);
+    i++;
+   }
     return 0;
 }
