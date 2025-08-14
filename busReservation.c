@@ -3,9 +3,6 @@
 char newusername[20],password[10],password1[10];
 int seats1=30,ns1=0,remainingseats1,seats2=40,ns2=0,remainingseats2,seats3=25,ns3=0,remainingseats3;
 int seats4=40,ns4=0,remainingseats4,seats5=50,ns5=0,remainingseats5,cs1=0,cs2=0,cs3=0,cs4=0,cs5=0;
-
-int flag=0;
-
 void registration();
 void login();
 void bus101();
@@ -420,39 +417,74 @@ void buscancel101()
 {
     printf("\nEnter number of seats:");
     scanf("%d",&cs1);
-    remainingseats1=remainingseats1+cs1;
-    printf("\nCancellation Successful !!%d seats canceled on bus number 101\n",cs1);
-
+    if (cs1 <= ns1)
+            {
+                ns1 = ns1 - cs1;
+                printf("\nCancellation Successful !!%d seats canceled on bus number 105\n", cs1);
+                break;
+            }
+            else
+            {
+                printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
+            }
 }
 void buscancel102()
 {
     printf("\nEnter number of seats:");
     scanf("%d",&cs2);
-    remainingseats2=remainingseats2+cs2;
-    printf("\nCancellation Successful !!%d seats canceled on bus number 102\n",cs2);
-
+if (cs2 <= ns2)
+            {
+                ns2 = ns2 - cs2;
+                printf("\nCancellation Successful !!%d seats canceled on bus number 105\n", cs2);
+                break;
+            }
+            else
+            {
+                printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
+            }
 }
 void buscancel103()
 {
     printf("\nEnter number of seats:");
     scanf("%d",&cs3);
-    remainingseats3=remainingseats3+cs3;
-    printf("\nCancellation Successful !!%d seats canceled on bus number 103\n",cs3);
-
+    if (cs3 <= ns3)
+            {
+                ns3 = ns3 - cs3;
+                printf("\nCancellation Successful !!%d seats canceled on bus number 105\n", cs3);
+                break;
+            }
+            else
+            {
+                printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
+            }
 }
 void buscancel104()
 {
     printf("\nEnter number of seats:");
     scanf("%d",&cs4);
-    remainingseats4=remainingseats4+cs4;
-    printf("\nCancellation Successful !!%d seats canceled on bus number 104\n",cs4);
-
+if (cs4 <= ns4)
+            {
+                ns4 = ns4 - cs4;
+                printf("\nCancellation Successful !!%d seats canceled on bus number 105\n", cs4);
+                break;
+            }
+            else
+            {
+                printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
+            }
 }
 void buscancel105()
 {
     printf("\nEnter number of seats:");
     scanf("%d",&cs5);
-    remainingseats5=remainingseats5+cs5;
-    printf("\nCancellation Successful !!%d seats canceled on bus number 105\n",cs5);
-
+    if (cs5 <= ns5)
+            {
+                ns5 = ns5 - cs5;
+                printf("\nCancellation Successful !!%d seats canceled on bus number 105\n", cs5);
+                break;
+            }
+            else
+            {
+                printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
+            }
 }
