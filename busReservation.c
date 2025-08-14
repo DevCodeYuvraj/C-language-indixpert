@@ -283,7 +283,7 @@ void bus102()
     }
     else
     {
-        printf("\nBooking Successful ! %d Seats Booked in Bus No=101", ns2);
+        printf("\nBooking Successful ! %d Seats Booked in Bus No=102", ns2);
     }
 }
 void bus103()
@@ -299,7 +299,7 @@ void bus103()
     }
     else
     {
-        printf("\nBooking Successful ! %d Seats Booked in Bus No=101", ns3);
+        printf("\nBooking Successful ! %d Seats Booked in Bus No=103", ns3);
     }
 }
 void bus104()
@@ -315,7 +315,7 @@ void bus104()
     }
     else
     {
-        printf("\nBooking Successful ! %d Seats Booked in Bus No=101", ns4);
+        printf("\nBooking Successful ! %d Seats Booked in Bus No=104", ns4);
     }
 }
 void bus105()
@@ -331,7 +331,7 @@ void bus105()
     }
     else
     {
-        printf("\nBooking Successful ! %d Seats Booked in Bus No=101", ns5);
+        printf("\nBooking Successful ! %d Seats Booked in Bus No=105", ns5);
     }
 }
 
