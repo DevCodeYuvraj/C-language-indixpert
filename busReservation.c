@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
-char newusername[20],password[10],password1[10];
-int seats1=30,ns1=0,remainingseats1,seats2=40,ns2=0,remainingseats2,seats3=25,ns3=0,remainingseats3;
-int seats4=40,ns4=0,remainingseats4,seats5=50,ns5=0,remainingseats5,cs1=0,cs2=0,cs3=0,cs4=0,cs5=0;
+char newusername[20], password[10], password1[10];
+int seats1 = 30, ns1 = 0, remainingseats1, seats2 = 40, ns2 = 0, remainingseats2, seats3 = 25, ns3 = 0, remainingseats3;
+int seats4 = 40, ns4 = 0, remainingseats4, seats5 = 50, ns5 = 0, remainingseats5, cs1 = 0, cs2 = 0, cs3 = 0, cs4 = 0, cs5 = 0;
 void registration();
 void login();
 void bus101();
@@ -22,28 +22,27 @@ void buscancel103();
 void buscancel104();
 void buscancel105();
 
-
 int main()
 {
-    int option,busno;
-    while(1)
+    int option, busno;
+    while (1)
     {
         printf("\n---- Bus Reservation System -------\n");
         printf("\n1. Sign Up");
         printf("\n2. Sign In");
         printf("\n3. Exit");
         printf("\nPlease enter your choice:");
-        scanf("%d",&option);
-        if(option==1)
+        scanf("%d", &option);
+        if (option == 1)
         {
             registration();
         }
-        else if(option==2)
+        else if (option == 2)
         {
             login();
             break;
         }
-        else if(option==3)
+        else if (option == 3)
         {
             break;
         }
@@ -51,18 +50,16 @@ int main()
         {
             printf("\nPlease enter correct option(1-3):");
         }
-
-    }    
-
+    }
 
     return 0;
 }
 
 void menu()
 {
-        while(1)
+    while (1)
     {
-        int choice,busno;
+        int choice, busno;
         while (1)
         {
             printf("\n------------------------Bus information------------------------\n");
@@ -87,123 +84,113 @@ void menu()
             }
             else
             {
-               printf("\nEnter correct option:");
+                printf("\nEnter correct option:");
             }
         }
 
-        if (choice==1)
+        if (choice == 1)
         {
             printf("please enter bus number");
-            scanf("%d",&busno);
-            if(busno==101)
+            scanf("%d", &busno);
+            if (busno == 101)
             {
                 bus101();
-                
             }
-            else if(busno==102)
+            else if (busno == 102)
             {
                 bus102();
-                
             }
-            else if(busno==103)
+            else if (busno == 103)
             {
                 bus103();
-                
             }
-            else if(busno==104)
+            else if (busno == 104)
             {
                 bus104();
-            
             }
-            else if(busno==105)
+            else if (busno == 105)
             {
                 bus105();
-                
             }
-            else 
+            else
             {
                 printf("\nEnter valid bus number:");
             }
         }
-        else if(choice==2)
+        else if (choice == 2)
         {
 
             printf("\nEnter bus number: ");
-            scanf("%d",&busno);
-            if(busno==101)
+            scanf("%d", &busno);
+            if (busno == 101)
             {
                 buscancel101();
             }
-            else if(busno==102)
+            else if (busno == 102)
             {
                 buscancel102();
             }
-            else if(busno==103)
+            else if (busno == 103)
             {
                 buscancel103();
             }
-            else if(busno==104)
+            else if (busno == 104)
             {
                 buscancel104();
             }
-            else if(busno==105)
+            else if (busno == 105)
             {
                 buscancel105();
             }
             else
             {
                 printf("\nEnter correct bus no:");
-
             }
         }
-        else if(choice==3)
+        else if (choice == 3)
         {
             printf("\nEnter bus number: ");
-            scanf("%d",&busno);
-            if(busno==101)
+            scanf("%d", &busno);
+            if (busno == 101)
             {
                 busStatus101();
             }
-            else if(busno==102)
+            else if (busno == 102)
             {
                 busStatus102();
             }
-            else if(busno==103)
+            else if (busno == 103)
             {
                 busStatus103();
             }
-            else if(busno==104)
+            else if (busno == 104)
             {
                 busStatus104();
             }
-            else if(busno==105)
+            else if (busno == 105)
             {
                 busStatus105();
             }
             else
             {
                 printf("\nEnter correct bus no:");
-
             }
         }
-        else if(choice==4)
+        else if (choice == 4)
         {
-           
+
             printf("\nloging out successful");
-           flag=0;
-           break;
+            break;
         }
         else
         {
             printf("\n Choose correct option:");
-
         }
-
     }
 }
 void registration()
 {
-    while(1)
+    while (1)
     {
         printf("\n*****User Registration*****");
         printf("\nPlease create a user name:");
@@ -215,7 +202,7 @@ void registration()
         printf("\nPlease confirm password:");
         scanf(" %[^\n]", &password1);
         // printf("%s",password1);
-        if(strcmp(password,password1)==0)
+        if (strcmp(password, password1) == 0)
         {
             printf("\nAccount Created\n");
             break;
@@ -225,7 +212,6 @@ void registration()
             printf("\nPlease check your password:");
         }
     }
-        
 }
 
 void login()
@@ -247,17 +233,16 @@ void login()
             printf("\nPlease enter password:");
             scanf(" %[^\n]", &pass);
             // printf("%s",pass);
-            if(strcmp(username,newusername)==0 && strcmp(pass,password)==0)
+            if (strcmp(username, newusername) == 0 && strcmp(pass, password) == 0)
             {
                 printf("\nlogin successful, welcome %s", username);
                 menu();
                 break;
             }
-            
         }
         else if (choice == 2)
         {
-            
+
             break;
         }
         else
@@ -267,12 +252,10 @@ void login()
     }
 }
 
-
-
 void bus101()
 {
 
-    printf("\nTotal Seats Available= %d", seats1);
+    printf("\nTotal Seats = %d", seats1);
     remainingseats1 = seats1 - ns1;
     printf("\nAvailable seats=%d", remainingseats1);
     printf("\nEnter no of seats:");
@@ -284,13 +267,12 @@ void bus101()
     else
     {
         printf("\nBooking Successful ! %d Seats Booked in Bus No=101", ns1);
-        
     }
 }
 
 void bus102()
 {
-   printf("\nTotal Seats Available= %d", seats2);
+    printf("\nTotal Seats = %d", seats2);
     remainingseats2 = seats2 - ns2;
     printf("\nAvailable seats=%d", remainingseats2);
     printf("\nEnter no of seats:");
@@ -302,12 +284,11 @@ void bus102()
     else
     {
         printf("\nBooking Successful ! %d Seats Booked in Bus No=101", ns2);
-        
     }
 }
 void bus103()
 {
-printf("\nTotal Seats Available= %d", seats3);
+    printf("\nTotal Seats = %d", seats3);
     remainingseats3 = seats3 - ns3;
     printf("\nAvailable seats=%d", remainingseats3);
     printf("\nEnter no of seats:");
@@ -319,12 +300,11 @@ printf("\nTotal Seats Available= %d", seats3);
     else
     {
         printf("\nBooking Successful ! %d Seats Booked in Bus No=101", ns3);
-        
     }
 }
 void bus104()
 {
-    printf("\nTotal Seats Available= %d", seats4);
+    printf("\nTotal Seats = %d", seats4);
     remainingseats4 = seats4 - ns4;
     printf("\nAvailable seats=%d", remainingseats4);
     printf("\nEnter no of seats:");
@@ -336,12 +316,11 @@ void bus104()
     else
     {
         printf("\nBooking Successful ! %d Seats Booked in Bus No=101", ns4);
-        
     }
 }
 void bus105()
 {
-    printf("\nTotal Seats Available= %d", seats5);
+    printf("\nTotal Seats = %d", seats5);
     remainingseats5 = seats5 - ns5;
     printf("\nAvailable seats=%d", remainingseats5);
     printf("\nEnter no of seats:");
@@ -353,7 +332,6 @@ void bus105()
     else
     {
         printf("\nBooking Successful ! %d Seats Booked in Bus No=101", ns5);
-        
     }
 }
 
@@ -363,10 +341,9 @@ void busStatus101()
     printf("\nSource city : Delhi");
     printf("\nDestination city : Jammu");
     printf("\nTotal seats : %d ", seats1);
-    remainingseats1=seats1-ns1;
-    printf("\nAvailable seats : %d ",remainingseats1);
+    remainingseats1 = seats1 - ns1;
+    printf("\nAvailable seats : %d ", remainingseats1);
     printf("\nfare : 650.00");
-
 }
 void busStatus102()
 {
@@ -374,10 +351,9 @@ void busStatus102()
     printf("\nSource city : Jodhpur");
     printf("\nDestination city : Gurugram");
     printf("\nTotal seats : %d ", seats2);
-    remainingseats2=seats2-ns2;
-    printf("\nAvailable seats : %d ",remainingseats2);
+    remainingseats2 = seats2 - ns2;
+    printf("\nAvailable seats : %d ", remainingseats2);
     printf("\nfare : 600.00");
-
 }
 void busStatus103()
 {
@@ -385,10 +361,9 @@ void busStatus103()
     printf("\nSource city : Hyderabad");
     printf("\nDestination city : Ahmedabad");
     printf("\nTotal seats : %d ", seats3);
-    remainingseats3=seats3-ns3;
-    printf("\nAvailable seats : %d ",remainingseats3);
+    remainingseats3 = seats3 - ns3;
+    printf("\nAvailable seats : %d ", remainingseats3);
     printf("\nfare : 200.00");
-
 }
 void busStatus104()
 {
@@ -396,10 +371,9 @@ void busStatus104()
     printf("\nSource city : Surat ");
     printf("\nDestination city : Uttrakhand ");
     printf("\nTotal seats : %d ", seats4);
-    remainingseats4=seats4-ns4;
-    printf("\nAvailable seats : %d ",remainingseats4);
+    remainingseats4 = seats4 - ns4;
+    printf("\nAvailable seats : %d ", remainingseats4);
     printf("\nfare : 500.00");
-
 }
 void busStatus105()
 {
@@ -407,84 +381,98 @@ void busStatus105()
     printf("\nSource city : Udaipur ");
     printf("\nDestination city : Jaipur");
     printf("\nTotal seats : %d ", seats5);
-    remainingseats5=seats5-ns5;
-    printf("\nAvailable seats : %d  ",remainingseats5);
+    remainingseats5 = seats5 - ns5;
+    printf("\nAvailable seats : %d  ", remainingseats5);
     printf("\nfare : 400.00");
-
 }
 
 void buscancel101()
 {
-    printf("\nEnter number of seats:");
-    scanf("%d",&cs1);
-    if (cs1 <= ns1)
-            {
-                ns1 = ns1 - cs1;
-                printf("\nCancellation Successful !!%d seats canceled on bus number 105\n", cs1);
-                break;
-            }
-            else
-            {
-                printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
-            }
+    while (1)
+    {
+        printf("\nEnter number of seats:");
+        scanf("%d", &cs1);
+        if (cs1 <= ns1)
+        {
+            ns1 = ns1 - cs1;
+            printf("\nCancellation Successful !!%d seats canceled on bus number 101\n", cs1);
+            break;
+        }
+        else
+        {
+            printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
+        }
+    }
 }
 void buscancel102()
 {
-    printf("\nEnter number of seats:");
-    scanf("%d",&cs2);
-if (cs2 <= ns2)
-            {
-                ns2 = ns2 - cs2;
-                printf("\nCancellation Successful !!%d seats canceled on bus number 105\n", cs2);
-                break;
-            }
-            else
-            {
-                printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
-            }
+    while (1)
+    {
+        printf("\nEnter number of seats:");
+        scanf("%d", &cs2);
+        if (cs2 <= ns2)
+        {
+            ns2 = ns2 - cs2;
+            printf("\nCancellation Successful !!%d seats canceled on bus number 102\n", cs2);
+            break;
+        }
+        else
+        {
+            printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
+        }
+    }
 }
 void buscancel103()
 {
-    printf("\nEnter number of seats:");
-    scanf("%d",&cs3);
-    if (cs3 <= ns3)
-            {
-                ns3 = ns3 - cs3;
-                printf("\nCancellation Successful !!%d seats canceled on bus number 105\n", cs3);
-                break;
-            }
-            else
-            {
-                printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
-            }
+    while (1)
+    {
+        printf("\nEnter number of seats:");
+        scanf("%d", &cs3);
+        if (cs3 <= ns3)
+        {
+            ns3 = ns3 - cs3;
+            printf("\nCancellation Successful !!%d seats canceled on bus number 103\n", cs3);
+            break;
+        }
+        else
+        {
+            printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
+        }
+    }
 }
 void buscancel104()
 {
-    printf("\nEnter number of seats:");
-    scanf("%d",&cs4);
-if (cs4 <= ns4)
-            {
-                ns4 = ns4 - cs4;
-                printf("\nCancellation Successful !!%d seats canceled on bus number 105\n", cs4);
-                break;
-            }
-            else
-            {
-                printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
-            }
+    while (1)
+    {
+        printf("\nEnter number of seats:");
+        scanf("%d", &cs4);
+        if (cs4 <= ns4)
+        {
+            ns4 = ns4 - cs4;
+            printf("\nCancellation Successful !!%d seats canceled on bus number 104\n", cs4);
+            break;
+        }
+        else
+        {
+            printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
+        }
+    }
 }
 void buscancel105()
 {
-    printf("\nEnter number of seats:");
-    scanf("%d",&cs5);
-    if (cs5 <= ns5)
-            {
-                ns5 = ns5 - cs5;
-                printf("\nCancellation Successful !!%d seats canceled on bus number 105\n", cs5);
-                break;
-            }
-            else
-            {
-                printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
-            }
+    while (1)
+    {
+        printf("\nEnter number of seats:");
+        scanf("%d", &cs5);
+        if (cs5 <= ns5)
+        {
+            ns5 = ns5 - cs5;
+            printf("\nCancellation Successful !!%d seats canceled on bus number 105\n", cs5);
+            break;
+        }
+        else
+        {
+            printf("\nYou have entered more nnumber of seats than your have booked , Try Again !");
+        }
+    }
 }
